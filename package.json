@@ -1,0 +1,8 @@
+{
+  "name": "x-growbox",
+  "description": "Dynamically grows according to inner content",
+  "version": "0.1.0",
+  "devDependencies": {
+    "bower": "~0.7.0"
+  }
+}

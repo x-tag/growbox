@@ -6,18 +6,18 @@ Node / NPM
 
 Bower (Package Manager)
 
-```
-npm install bower -g
-```
+	$ npm install bower -g
+
+For development
+	
+	$ bower install
 
 Inside your project run:
 
-```
-bower install x-tag-growbox
-```
+	$ bower install x-tag-growbox
+
 
 This downloads the component and dependencies to ./components
-
 
 
 ## About
