@@ -4,7 +4,6 @@
   "version": "0.1.3",
   "description": "Dynamically grows according to inner content", 
   "author": "Daniel Buchner",
-  "description": "",
   "categories": ["structural"],
   "demo": "demo/demo.html",
   "compatibility": {
