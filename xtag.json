@@ -1,7 +1,7 @@
 { 
   "name": "Growbox",
   "tagName": "x-growbox",
-  "version": "0.1.3",
+  "version": "0.1.1",
   "description": "Dynamically grows according to inner content", 
   "author": "Daniel Buchner",
   "categories": ["structural"],
