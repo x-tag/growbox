@@ -3,6 +3,8 @@
   "description": "Dynamically grows according to inner content",
   "version": "0.1.0",
   "devDependencies": {
-    "bower": "~0.7.0"
+    "bower": "0.7.0",
+    "grunt": "~0.4.0rc7",
+    "grunt-contrib-concat": "~0.1.2rc6"
   }
 }
