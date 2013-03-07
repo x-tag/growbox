@@ -9,8 +9,9 @@
     "element",
     "x-tag"
   ],
-  "scripts": [
-    "src/growbox.js"
+  "main": [
+    "src/growbox.js",
+    "src/growbox.css"
   ],
   "dependencies": {
     "x-tag-core": "*"
