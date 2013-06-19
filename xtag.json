@@ -1,11 +1,13 @@
-{ 
+{
   "name": "Growbox",
   "tagName": "x-growbox",
-  "version": "0.1.2",
-  "description": "Dynamically grows according to inner content", 
+  "version": "0.2.0",
+  "description": "Dynamically grows according to inner content",
   "author": "Daniel Buchner",
-  "categories": ["structural"],
-  "demo": "demo/demo.html",
+  "categories": [
+    "structural"
+  ],
+  "demo": "demo/index.html",
   "compatibility": {
     "firefox": 5,
     "chrome": 4,
@@ -13,6 +15,5 @@
     "android": 2.1,
     "ios": 4
   },
-  "documentation": {
-  }
+  "documentation": {}
 }

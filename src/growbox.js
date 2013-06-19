@@ -5,7 +5,7 @@
     lifecycle: {
       created: function(){
         var children = xtag.toArray(this.children);
-        this.innerHTML = this.template;
+        this.innerHTML = this.templateHTML;
         xtag.addEvent(this.firstElementChild.firstElementChild.nextElementSibling, 'overflow', this.matchDimensions.bind(this));
         xtag.addEvent(this.firstElementChild.lastElementChild, 'underflow', this.matchDimensions.bind(this));
         children.forEach(function(el){
@@ -15,7 +15,7 @@
       }
     },
     prototype: {
-      template: {
+      templateHTML: {
       value: '<div class="x-grow-wrap" onresize="(this.parentNode.matchDimensions || function(){})(true)">' +
         '<div class="x-grow-content"></div>' +
         '<div class="x-grow-overflow"><div></div></div>' +

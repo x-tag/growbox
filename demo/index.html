@@ -3,35 +3,35 @@
 
 	<head>
 		<meta charset="utf-8" />
-		
+
 		<title>Growbox Demo - X-Tag</title>
-		
+
 		<link rel="stylesheet" type="text/css" href="../src/growbox.css"/>
-		
-		<script type="text/javascript" src="x-tag-components.js"></script>	
-		<script type="text/javascript" src="../src/growbox.js"></script>	
-			
+
+		<script type="text/javascript" src="x-tag-components.js"></script>
+		<script type="text/javascript" src="../src/growbox.js"></script>
+
 		<style type="text/css">
 			#growbox {
 				background: #eee;
 				border: 1px solid #aaa;
 			}
-			
+
 			#growbox p {
 				display: none;
 			}
 			#growbox.big {
 				background: lightblue;
 			}
-			
+
 				#growbox.big p.ph1 {
 					display: block;
 				}
-			
+
 			#growbox.bigger {
 				background: lime;
 			}
-			
+
 				#growbox.bigger p {
 					display: block;
 				}
@@ -59,7 +59,7 @@
 			console.log(arguments);
 		}
 	}
-	
+
 	document.addEventListener('DOMComponentsLoaded', function(){
 		growbox = document.getElementById('growbox');
 		foo = document.getElementById('foo');
@@ -67,7 +67,7 @@
 			console.log('delegate', this);
 			growbox.className = !growbox.className ? 'big' : growbox.className == 'big' ? 'bigger' : '';
 		});
-		
+
 	}, false);
 </script>
 

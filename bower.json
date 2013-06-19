@@ -1,7 +1,7 @@
 {
   "name": "x-tag-growbox",
   "description": "Dynamically grows according to inner content",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "keywords": [
     "web-components",
     "growbox",
@@ -9,8 +9,9 @@
     "element",
     "x-tag"
   ],
-  "scripts": [
-    "src/growbox.js"
+  "main": [
+    "src/growbox.js",
+    "src/growbox.css"
   ],
   "dependencies": {
     "x-tag-core": "*"
