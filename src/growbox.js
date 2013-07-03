@@ -5,18 +5,20 @@
     lifecycle: {
       created: function(){
         var children = xtag.toArray(this.children);
-        this.innerHTML = this.templateHTML;
+        var frag = xtag.createFragment(this.templateHTML);
+        var content = frag.querySelector('.x-grow-content');
+        children.forEach(function(el){
+          content.appendChild(el);
+        });
+        this.appendChild(frag);
         xtag.addEvent(this.firstElementChild.firstElementChild.nextElementSibling, 'overflow', this.matchDimensions.bind(this));
         xtag.addEvent(this.firstElementChild.lastElementChild, 'underflow', this.matchDimensions.bind(this));
-        children.forEach(function(el){
-          this.appendChild(el);
-        }, this.firstElementChild.firstElementChild);
         this.matchDimensions();
       }
     },
     prototype: {
       templateHTML: {
-      value: '<div class="x-grow-wrap" onresize="(this.parentNode.matchDimensions || function(){})(true)">' +
+      value: '<div class="x-grow-wrap" onresize="this.parentNode.matchDimensions.call(this.parentNode)">' +
         '<div class="x-grow-content"></div>' +
         '<div class="x-grow-overflow"><div></div></div>' +
         '<div class="x-grow-underflow"><div></div></div>' +
