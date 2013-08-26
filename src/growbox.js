@@ -1,11 +1,17 @@
 
 (function(){
 
+  var template = '<div class="x-grow-wrap" onresize="this.parentNode.matchDimensions.call(this.parentNode)">' +
+        '<div class="x-grow-content"></div>' +
+        '<div class="x-grow-overflow"><div></div></div>' +
+        '<div class="x-grow-underflow"><div></div></div>' +
+      '</div>';
+
   xtag.register('x-growbox', {
     lifecycle: {
       created: function(){
         var children = xtag.toArray(this.children);
-        var frag = xtag.createFragment(this.templateHTML);
+        var frag = xtag.createFragment(template);
         var content = frag.querySelector('.x-grow-content');
         children.forEach(function(el){
           content.appendChild(el);
@@ -14,15 +20,6 @@
         xtag.addEvent(this.firstElementChild.firstElementChild.nextElementSibling, 'overflow', this.matchDimensions.bind(this));
         xtag.addEvent(this.firstElementChild.lastElementChild, 'underflow', this.matchDimensions.bind(this));
         this.matchDimensions();
-      }
-    },
-    prototype: {
-      templateHTML: {
-      value: '<div class="x-grow-wrap" onresize="this.parentNode.matchDimensions.call(this.parentNode)">' +
-        '<div class="x-grow-content"></div>' +
-        '<div class="x-grow-overflow"><div></div></div>' +
-        '<div class="x-grow-underflow"><div></div></div>' +
-      '</div>'
       }
     },
     methods: {
