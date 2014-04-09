@@ -1,3 +1,4 @@
+var exec = require('exec');
 module.exports = function(grunt) {
 
   // Project configuration.
@@ -27,6 +28,11 @@ module.exports = function(grunt) {
       file: 'package.json',
       prefix: '',
       commit: true
+    },
+    exec: {
+      'update-gh-pages':{
+        cmd:'git checkout gh-pages & git rebase master & git push origin gh-pages & git checkout master'
+      }
     }
   });
 
@@ -36,8 +42,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-bumpup');
   grunt.loadNpmTasks('grunt-tagrelease');
   grunt.loadNpmTasks('grunt-smush-components');
+  grunt.loadNpmTasks('grunt-exec');
 
   grunt.registerTask('build', ['jshint','smush-components']);
   grunt.registerTask('bump:patch', ['bumpup:patch', 'tagrelease']);
+  grunt.registerTask('push', ['']);
 
 };
